@@ -1,0 +1,12 @@
+{
+  "experiment": "EXP-002 · Crypto 30",
+  "version": "1.0.0",
+  "currency": "EUR",
+  "initialCash": 500,
+  "feeRate": 0.0026,
+  "maxPositions": 5,
+  "allocation": 0.2,
+  "stopLoss": 0.07,
+  "takeProfit": 0.12,
+  "symbols": ["BTC", "ETH", "SOL", "XRP", "ADA", "DOGE", "DOT", "AVAX", "LINK", "LTC", "XLM", "ATOM", "ALGO", "UNI", "AAVE", "FIL", "NEAR", "ICP", "ETC", "BCH", "MKR", "SAND", "MANA", "EOS", "XTZ", "FLOW", "KSM", "KAVA", "SNX", "COMP"]
+}

@@ -1,0 +1,10 @@
+{
+  "active": false,
+  "startedAt": null,
+  "lastRun": null,
+  "cash": 500,
+  "initialCash": 500,
+  "positions": {},
+  "trades": [],
+  "lastReport": null
+}
