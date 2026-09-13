@@ -1,6 +1,6 @@
 {
-  "portfolio": "conservative",
-  "experiment": "EXP-002 · Crypto 30",
+  "portfolio": "aggressive",
+  "experiment": "EXP-002-A · Crypto 30 Aggressive",
   "version": "1.0.0",
   "generatedAt": "2026-09-13T15:35:20Z",
   "coverage": {
@@ -17,24 +17,29 @@
       }
     ]
   },
-  "cash": 198.27,
-  "positionsValue": 302.28,
-  "equity": 500.55,
-  "pnl": 0.55,
+  "cash": 0.0,
+  "positionsValue": 498.7,
+  "equity": 498.7,
+  "pnl": -1.3,
   "openPositions": {
-    "ETH": {
-      "units": 0.04560752107987489,
-      "entryPrice": 2186.92,
-      "openedAt": "2026-09-12T18:45:30Z"
-    },
-    "XTZ": {
-      "units": 454.10672008741574,
-      "entryPrice": 0.21964,
-      "openedAt": "2026-09-12T18:45:30Z"
+    "SNX": {
+      "units": 669.9355185384202,
+      "entryPrice": 0.1861,
+      "openedAt": "2026-09-13T15:35:20Z"
     },
     "KAVA": {
-      "units": 1716.695352839931,
+      "units": 2145.8691910499138,
       "entryPrice": 0.0581,
+      "openedAt": "2026-09-13T15:35:20Z"
+    },
+    "UNI": {
+      "units": 23.059352285127712,
+      "entryPrice": 5.4067,
+      "openedAt": "2026-09-13T15:35:20Z"
+    },
+    "LTC": {
+      "units": 2.687540418193576,
+      "entryPrice": 46.39,
       "openedAt": "2026-09-13T15:35:20Z"
     }
   },
@@ -42,10 +47,37 @@
     {
       "at": "2026-09-13T15:35:20Z",
       "side": "BUY",
+      "symbol": "SNX",
+      "price": 0.1861,
+      "units": 669.9355185384202,
+      "fee": 0.33,
+      "reason": "trend + RSI entry"
+    },
+    {
+      "at": "2026-09-13T15:35:20Z",
+      "side": "BUY",
       "symbol": "KAVA",
       "price": 0.0581,
-      "units": 1716.695352839931,
-      "fee": 0.26,
+      "units": 2145.8691910499138,
+      "fee": 0.33,
+      "reason": "trend + RSI entry"
+    },
+    {
+      "at": "2026-09-13T15:35:20Z",
+      "side": "BUY",
+      "symbol": "UNI",
+      "price": 5.4067,
+      "units": 23.059352285127712,
+      "fee": 0.33,
+      "reason": "trend + RSI entry"
+    },
+    {
+      "at": "2026-09-13T15:35:20Z",
+      "side": "BUY",
+      "symbol": "LTC",
+      "price": 46.39,
+      "units": 2.687540418193576,
+      "fee": 0.33,
       "reason": "trend + RSI entry"
     }
   ],
@@ -57,13 +89,13 @@
     },
     {
       "symbol": "ETH",
-      "decision": "HOLD",
-      "reason": "position remains within exit rules"
+      "decision": "SKIP",
+      "reason": "position limit or cash constraint"
     },
     {
       "symbol": "SOL",
       "decision": "SKIP",
-      "reason": "trend not positive"
+      "reason": "position limit or cash constraint"
     },
     {
       "symbol": "XRP",
@@ -83,7 +115,7 @@
     {
       "symbol": "DOT",
       "decision": "SKIP",
-      "reason": "RSI below entry range"
+      "reason": "trend not positive"
     },
     {
       "symbol": "AVAX",
@@ -97,8 +129,8 @@
     },
     {
       "symbol": "LTC",
-      "decision": "SKIP",
-      "reason": "trend not positive"
+      "decision": "BUY",
+      "reason": "trend + RSI entry"
     },
     {
       "symbol": "XLM",
@@ -108,7 +140,7 @@
     {
       "symbol": "ATOM",
       "decision": "SKIP",
-      "reason": "RSI below entry range"
+      "reason": "trend not positive"
     },
     {
       "symbol": "ALGO",
@@ -117,13 +149,13 @@
     },
     {
       "symbol": "UNI",
-      "decision": "SKIP",
-      "reason": "trend not positive"
+      "decision": "BUY",
+      "reason": "trend + RSI entry"
     },
     {
       "symbol": "AAVE",
       "decision": "SKIP",
-      "reason": "trend not positive"
+      "reason": "position limit or cash constraint"
     },
     {
       "symbol": "FIL",
@@ -133,7 +165,7 @@
     {
       "symbol": "NEAR",
       "decision": "SKIP",
-      "reason": "RSI below entry range"
+      "reason": "trend not positive"
     },
     {
       "symbol": "ICP",
@@ -163,7 +195,7 @@
     {
       "symbol": "MANA",
       "decision": "SKIP",
-      "reason": "trend not positive"
+      "reason": "RSI above entry range"
     },
     {
       "symbol": "EOS",
@@ -172,8 +204,8 @@
     },
     {
       "symbol": "XTZ",
-      "decision": "HOLD",
-      "reason": "position remains within exit rules"
+      "decision": "SKIP",
+      "reason": "position limit or cash constraint"
     },
     {
       "symbol": "FLOW",
@@ -192,8 +224,8 @@
     },
     {
       "symbol": "SNX",
-      "decision": "SKIP",
-      "reason": "trend not positive"
+      "decision": "BUY",
+      "reason": "trend + RSI entry"
     },
     {
       "symbol": "COMP",
@@ -211,13 +243,13 @@
     "SOL": {
       "pair": "SOLEUR",
       "price": 86.11,
-      "bullish": false,
+      "bullish": true,
       "rsi": 53.81
     },
     "UNI": {
       "pair": "UNIEUR",
       "price": 5.4067,
-      "bullish": false,
+      "bullish": true,
       "rsi": 59.02
     },
     "XRP": {
@@ -247,13 +279,13 @@
     "DOT": {
       "pair": "DOTEUR",
       "price": 0.87,
-      "bullish": true,
+      "bullish": false,
       "rsi": 14.02
     },
     "AAVE": {
       "pair": "AAVEEUR",
       "price": 107.05,
-      "bullish": false,
+      "bullish": true,
       "rsi": 57.65
     },
     "ADA": {
@@ -271,7 +303,7 @@
     "LTC": {
       "pair": "LTCEUR",
       "price": 46.39,
-      "bullish": false,
+      "bullish": true,
       "rsi": 58.81
     },
     "AVAX": {
@@ -283,7 +315,7 @@
     "ATOM": {
       "pair": "ATOMEUR",
       "price": 1.3741,
-      "bullish": true,
+      "bullish": false,
       "rsi": 10.56
     },
     "FIL": {
@@ -301,7 +333,7 @@
     "NEAR": {
       "pair": "NEAREUR",
       "price": 1.9822,
-      "bullish": true,
+      "bullish": false,
       "rsi": 41.51
     },
     "XTZ": {
@@ -331,7 +363,7 @@
     "MANA": {
       "pair": "MANAEUR",
       "price": 0.06583,
-      "bullish": false,
+      "bullish": true,
       "rsi": 75.87
     },
     "KSM": {
@@ -361,7 +393,7 @@
     "SNX": {
       "pair": "SNXEUR",
       "price": 0.1861,
-      "bullish": false,
+      "bullish": true,
       "rsi": 66.93
     },
     "KAVA": {
