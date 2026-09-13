@@ -121,7 +121,30 @@ def main():
         actions.append(trade)
 
     positions_value = sum(p["units"] * market[s]["price"] for s, p in state["positions"].items() if s in market)
-    report = {"experiment": CONFIG["experiment"], "version": CONFIG["version"], "generatedAt": now, "coverage": {"configured": len(CONFIG["symbols"]), "eligible": len(market), "skipped": skipped}, "cash": round(state["cash"], 2), "positionsValue": round(positions_value, 2), "equity": round(state["cash"] + positions_value, 2), "pnl": round(state["cash"] + positions_value - state["initialCash"], 2), "openPositions": state["positions"], "actions": actions, "market": market}
+    equity = round(state["cash"] + positions_value, 2)
+    action_symbols = {a["symbol"] for a in actions}
+    decisions = []
+    for symbol in CONFIG["symbols"]:
+        data = market.get(symbol)
+        if not data:
+            decisions.append({"symbol": symbol, "decision": "NO DATA", "reason": "market data unavailable"})
+        elif symbol in action_symbols:
+            action = next(a for a in actions if a["symbol"] == symbol)
+            decisions.append({"symbol": symbol, "decision": action["side"], "reason": action["reason"]})
+        elif symbol in state["positions"]:
+            decisions.append({"symbol": symbol, "decision": "HOLD", "reason": "position remains within exit rules"})
+        elif not data["bullish"]:
+            decisions.append({"symbol": symbol, "decision": "SKIP", "reason": "trend not positive"})
+        elif data["rsi"] < 52:
+            decisions.append({"symbol": symbol, "decision": "SKIP", "reason": "RSI below entry range"})
+        elif data["rsi"] > 68:
+            decisions.append({"symbol": symbol, "decision": "SKIP", "reason": "RSI above entry range"})
+        else:
+            decisions.append({"symbol": symbol, "decision": "SKIP", "reason": "position limit or cash constraint"})
+    report = {"experiment": CONFIG["experiment"], "version": CONFIG["version"], "generatedAt": now, "coverage": {"configured": len(CONFIG["symbols"]), "eligible": len(market), "skipped": skipped}, "cash": round(state["cash"], 2), "positionsValue": round(positions_value, 2), "equity": equity, "pnl": round(equity - state["initialCash"], 2), "openPositions": state["positions"], "actions": actions, "decisions": decisions, "market": market}
+    state.setdefault("equityHistory", []).append({"at": now, "equity": equity, "cash": round(state["cash"], 2), "positionsValue": round(positions_value, 2), "btcPrice": market.get("BTC", {}).get("price")})
+    state["equityHistory"] = state["equityHistory"][-500:]
+    state.setdefault("benchmarks", {"recordedAt": now, "btcPrice": market.get("BTC", {}).get("price")})
     state["lastRun"] = now
     state["lastReport"] = report
     save(state, STATE_PATH)
