@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP-002-A · Crypto 30 Aggressive",
+  "version": "1.0.0",
+  "currency": "EUR",
+  "initialCash": 500,
+  "feeRate": 0.0026,
+  "maxPositions": 4,
+  "allocation": 0.25,
+  "stopLoss": 0.1,
+  "takeProfit": 0.2,
+  "fastPeriod": 10,
+  "slowPeriod": 30,
+  "rsiMin": 48,
+  "rsiMax": 75,
+  "symbols": ["BTC", "ETH", "SOL", "XRP", "ADA", "DOGE", "DOT", "AVAX", "LINK", "LTC", "XLM", "ATOM", "ALGO", "UNI", "AAVE", "FIL", "NEAR", "ICP", "ETC", "BCH", "MKR", "SAND", "MANA", "EOS", "XTZ", "FLOW", "KSM", "KAVA", "SNX", "COMP"]
+}

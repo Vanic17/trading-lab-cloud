@@ -22,6 +22,6 @@ jobs:
         run: |
           git config user.name "trading-lab-bot"
           git config user.email "trading-lab-bot@users.noreply.github.com"
-          git add data/state.json data/latest_report.json
+          git add data/*.json
           git diff --cached --quiet || git commit -m "paper cycle $(date -u +'%Y-%m-%dT%H:%MZ')"
           git push
