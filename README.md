@@ -4,8 +4,11 @@ Un esperimento **solo paper trading**: nessun account exchange, nessun denaro re
 nessuna leva, nessuno short e nessun ordine inviato all'esterno.
 
 Il motore controlla un paniere di 30 crypto rispetto all'euro ogni 4 ore, usando
-esclusivamente candele chiuse Kraken. Lo stato del conto virtuale e il report sono
-versionati nel repository, perciò il ciclo continua anche a pagina chiusa.
+esclusivamente candele chiuse Kraken. Per rendere l'esecuzione resistente ai ritardi dei
+cron GitHub, un controllo leggero parte ogni 15 minuti ma il motore elabora e registra
+un nuovo ciclo solo quando sono trascorse almeno quattro ore dall'ultimo ciclo riuscito.
+Lo stato del conto virtuale e il report sono versionati nel repository, perciò il ciclo
+continua anche a pagina chiusa.
 
 ## Avvio e pubblicazione
 
