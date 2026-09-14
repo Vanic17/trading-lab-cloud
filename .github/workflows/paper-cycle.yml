@@ -3,10 +3,15 @@ name: Run paper-trading cycle
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *'
+    # Recovery checks avoid top-of-hour congestion; trading remains limited to one cycle every four hours.
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: write
+
+concurrency:
+  group: paper-trading-cycle
+  cancel-in-progress: false
 
 jobs:
   cycle:
@@ -16,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run deterministic paper cycle
+      - name: Run deterministic paper cycle when due
         run: python scripts/run_paper_cycle.py
       - name: Save virtual account state
         run: |
