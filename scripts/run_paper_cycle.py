@@ -3,7 +3,7 @@
 import json
 import statistics
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import urlopen
@@ -59,6 +59,13 @@ def defaults(config):
         "cash": config["initialCash"], "initialCash": config["initialCash"],
         "positions": {}, "trades": [], "lastReport": None, "equityHistory": [],
     }
+
+def cycle_due(state, now):
+    last_run = state.get("lastRun")
+    if not last_run:
+        return True
+    last_at = datetime.fromisoformat(last_run.replace("Z", "+00:00"))
+    return now - last_at >= timedelta(hours=4)
 
 def market_for(config, candles):
     fast_period, slow_period = config.get("fastPeriod", 20), config.get("slowPeriod", 50)
@@ -147,8 +154,17 @@ def run_portfolio(name, config, state, market, skipped, now):
     return state, report
 
 def main():
-    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    now_dt = datetime.now(timezone.utc).replace(microsecond=0)
+    now = now_dt.isoformat().replace("+00:00", "Z")
     configs = [(name, json.loads(config_path.read_text()), state_path, report_path) for name, config_path, state_path, report_path in PORTFOLIOS]
+    current_states = {
+        name: json.loads(state_path.read_text()) if state_path.exists() else defaults(config)
+        for name, config, state_path, _ in configs
+    }
+    if not any(cycle_due(state, now_dt) for state in current_states.values()):
+        print(json.dumps({"at": now, "skipped": True, "reason": "next cycle not due"}))
+        return
+
     universe = configs[0][1]["symbols"]
     requested, skipped = [], []
     for symbol in universe:
@@ -169,8 +185,7 @@ def main():
 
     reports = {}
     for name, config, state_path, report_path in configs:
-        current = json.loads(state_path.read_text()) if state_path.exists() else defaults(config)
-        state, report = run_portfolio(name, config, current, market_for(config, candles), skipped, now)
+        state, report = run_portfolio(name, config, current_states[name], market_for(config, candles), skipped, now)
         save(state, state_path)
         save(report, report_path)
         reports[name] = report
