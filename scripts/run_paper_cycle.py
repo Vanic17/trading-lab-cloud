@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run two deterministic, spot-only paper portfolios from the same closed Kraken candles."""
 import json
+import copy
 import statistics
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
@@ -23,7 +24,34 @@ KRAKEN_EUR_PAIRS = {
 PORTFOLIOS = (
     ("conservative", ROOT / "config.json", ROOT / "data" / "state.json", ROOT / "data" / "latest_report.json"),
     ("aggressive", ROOT / "config-aggressive.json", ROOT / "data" / "aggressive_state.json", ROOT / "data" / "latest_aggressive_report.json"),
+    ("conservative_v2", ROOT / "config-conservative-v2.json", ROOT / "data" / "conservative_v2_state.json", ROOT / "data" / "latest_conservative_v2_report.json"),
+    ("aggressive_v2", ROOT / "config-aggressive-v2.json", ROOT / "data" / "aggressive_v2_state.json", ROOT / "data" / "latest_aggressive_v2_report.json"),
 )
+
+def fork_state(parent, name, config, now):
+    """Copy accounting exactly; comparison begins here, never at a new EUR500."""
+    state = copy.deepcopy(parent)
+    state["fork"] = {"parent": config["parentPortfolio"], "at": now,
+                     "sourceLastRun": parent["lastRun"],
+                     "equity": parent["lastReport"]["equity"],
+                     "cash": parent["cash"], "positions": copy.deepcopy(parent["positions"]),
+                     "tradeCount": len(parent["trades"]),
+                     "fees": sum(t["fee"] for t in parent["trades"])}
+    state["lastReport"].update(portfolio=name, experiment=config["experiment"], version=config["version"])
+    return state
+
+def entry_block(config, state, market, actions, now):
+    if not config.get("riskControls"):
+        return None
+    if any(t["side"] == "SELL" for t in actions):
+        return "cooldown: no entries in an exit cycle"
+    if state.get("entryBlockedUntil") and now < state["entryBlockedUntil"]:
+        return "cooldown after exit until " + state["entryBlockedUntil"]
+    if any(s not in market for s in state["positions"]):
+        return "risk check unavailable: missing held-asset price"
+    if config.get("requireBtcTrend") and not market.get("BTC", {}).get("bullish", False):
+        return "market filter: BTC trend not positive or unavailable"
+    return None
 
 def api(method, **params):
     with urlopen(KRAKEN + method + "?" + urlencode(params), timeout=8) as response:
@@ -88,6 +116,8 @@ def decision_reason(symbol, market, state, actions, config):
         return action["reason"], action["side"]
     if symbol in state["positions"]:
         return "position remains within exit rules", "HOLD"
+    if state.get("entryBlockReason"):
+        return state["entryBlockReason"], "SKIP"
     if not data["bullish"]:
         return "trend not positive", "SKIP"
     if data["rsi"] < config.get("rsiMin", 52):
@@ -118,6 +148,11 @@ def run_portfolio(name, config, state, market, skipped, now):
         actions.append(trade)
         del state["positions"][symbol]
 
+    if config.get("riskControls") and actions:
+        hours = config["stopCooldownHours"] if any(t["reason"] == "stop loss" for t in actions) else 4
+        state["entryBlockedUntil"] = (datetime.fromisoformat(now.replace("Z", "+00:00")) + timedelta(hours=hours)).isoformat().replace("+00:00", "Z")
+    state["entryBlockReason"] = entry_block(config, state, market, actions, now)
+
     candidates = sorted(
         (symbol for symbol, data in market.items()
          if data["bullish"] and config.get("rsiMin", 52) <= data["rsi"] <= config.get("rsiMax", 68)
@@ -125,8 +160,19 @@ def run_portfolio(name, config, state, market, skipped, now):
         key=lambda symbol: market[symbol]["rsi"], reverse=True,
     )
     while candidates and len(state["positions"]) < config["maxPositions"]:
+        if state.get("entryBlockReason"):
+            break
         symbol = candidates.pop(0)
         budget = min(state["cash"], state["initialCash"] * config["allocation"])
+        if config.get("riskControls"):
+            invested = sum(p["units"] * market[s]["price"] for s, p in state["positions"].items())
+            equity_now = state["cash"] + invested
+            # Limit new spending without liquidating inherited positions. Using gross
+            # budget for headroom conservatively accounts for entry fees.
+            headroom = max(0, config["maxExposure"] * equity_now - invested)
+            budget = min(budget, equity_now * config["allocation"], headroom)
+            if budget < 10:
+                state["entryBlockReason"] = "exposure cap or cash below minimum entry"
         if budget < 10:
             break
         data = market[symbol]
@@ -161,6 +207,11 @@ def main():
         name: json.loads(state_path.read_text()) if state_path.exists() else defaults(config)
         for name, config, state_path, _ in configs
     }
+    for name, config, state_path, report_path in configs:
+        if config.get("parentPortfolio") and not state_path.exists():
+            current_states[name] = fork_state(current_states[config["parentPortfolio"]], name, config, now)
+            save(current_states[name], state_path)
+            save(current_states[name]["lastReport"], report_path)
     if not any(cycle_due(state, now_dt) for state in current_states.values()):
         print(json.dumps({"at": now, "skipped": True, "reason": "next cycle not due"}))
         return
