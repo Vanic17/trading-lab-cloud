@@ -22,6 +22,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run deterministic paper cycle when due
+        env:
+          PYTHONUNBUFFERED: "1"
         run: python scripts/run_paper_cycle.py
       - name: Save virtual account state
         run: |
