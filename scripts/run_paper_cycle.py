@@ -95,6 +95,15 @@ def cycle_due(state, now):
     last_at = datetime.fromisoformat(last_run.replace("Z", "+00:00"))
     return now - last_at >= timedelta(hours=4)
 
+def cycle_status(state, now):
+    """Expose the due calculation in Actions logs without changing account state."""
+    last_run = state.get("lastRun")
+    if not last_run:
+        return {"lastRun": None, "elapsedSeconds": None, "due": True}
+    last_at = datetime.fromisoformat(last_run.replace("Z", "+00:00"))
+    elapsed = max(0, int((now - last_at).total_seconds()))
+    return {"lastRun": last_run, "elapsedSeconds": elapsed, "due": elapsed >= 4 * 60 * 60}
+
 def market_for(config, candles):
     fast_period, slow_period = config.get("fastPeriod", 20), config.get("slowPeriod", 50)
     return {
@@ -212,8 +221,10 @@ def main():
             current_states[name] = fork_state(current_states[config["parentPortfolio"]], name, config, now)
             save(current_states[name], state_path)
             save(current_states[name]["lastReport"], report_path)
-    if not any(cycle_due(state, now_dt) for state in current_states.values()):
-        print(json.dumps({"at": now, "skipped": True, "reason": "next cycle not due"}))
+    due = {name: cycle_status(state, now_dt) for name, state in current_states.items()}
+    print(json.dumps({"at": now, "event": "cycle_due_check", "portfolios": due}))
+    if not any(status["due"] for status in due.values()):
+        print(json.dumps({"at": now, "skipped": True, "reason": "next cycle not due", "portfolios": due}))
         return
 
     universe = configs[0][1]["symbols"]
