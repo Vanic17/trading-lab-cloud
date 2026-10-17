@@ -2,7 +2,7 @@
   "portfolio": "conservative_v2",
   "experiment": "EXP-002-P2 · Prudente 2.0",
   "version": "2.0.0",
-  "generatedAt": "2026-10-17T06:05:19Z",
+  "generatedAt": "2026-10-17T10:34:12Z",
   "coverage": {
     "configured": 30,
     "eligible": 28,
@@ -18,9 +18,9 @@
     ]
   },
   "cash": 344.94,
-  "positionsValue": 86.57,
-  "equity": 431.51,
-  "pnl": -68.49,
+  "positionsValue": 86.98,
+  "equity": 431.92,
+  "pnl": -68.08,
   "openPositions": {
     "KAVA": {
       "units": 1385.0516096077806,
@@ -182,173 +182,173 @@
     }
   ],
   "market": {
-    "AVAX": {
-      "pair": "AVAXEUR",
-      "price": 8.869,
-      "bullish": false,
-      "rsi": 50.68
-    },
     "BTC": {
       "pair": "XBTEUR",
-      "price": 72491.0,
-      "bullish": false,
-      "rsi": 43.15
-    },
-    "ADA": {
-      "pair": "ADAEUR",
-      "price": 0.199992,
-      "bullish": false,
-      "rsi": 42.91
-    },
-    "ETH": {
-      "pair": "ETHEUR",
-      "price": 2158.29,
-      "bullish": false,
-      "rsi": 46.93
-    },
-    "XRP": {
-      "pair": "XRPEUR",
-      "price": 1.163,
-      "bullish": false,
-      "rsi": 41.84
-    },
-    "LTC": {
-      "pair": "LTCEUR",
-      "price": 53.25,
+      "price": 72649.2,
       "bullish": false,
       "rsi": 47.86
     },
+    "FIL": {
+      "pair": "FILEUR",
+      "price": 1.036,
+      "bullish": false,
+      "rsi": 60.89
+    },
     "DOT": {
       "pair": "DOTEUR",
-      "price": 1.0545,
+      "price": 1.0334,
       "bullish": false,
-      "rsi": 60.85
+      "rsi": 52.45
     },
-    "ATOM": {
-      "pair": "ATOMEUR",
-      "price": 1.5657,
+    "ETH": {
+      "pair": "ETHEUR",
+      "price": 2163.55,
       "bullish": false,
-      "rsi": 48.86
+      "rsi": 50.44
     },
-    "SOL": {
-      "pair": "SOLEUR",
-      "price": 93.33,
+    "LTC": {
+      "pair": "LTCEUR",
+      "price": 52.82,
       "bullish": false,
-      "rsi": 50.42
+      "rsi": 49.19
+    },
+    "ADA": {
+      "pair": "ADAEUR",
+      "price": 0.199031,
+      "bullish": false,
+      "rsi": 40.62
+    },
+    "XRP": {
+      "pair": "XRPEUR",
+      "price": 1.16292,
+      "bullish": false,
+      "rsi": 41.66
     },
     "AAVE": {
       "pair": "AAVEEUR",
-      "price": 138.8,
+      "price": 139.12,
       "bullish": false,
-      "rsi": 50.46
+      "rsi": 52.29
     },
-    "UNI": {
-      "pair": "UNIEUR",
-      "price": 6.5157,
+    "SOL": {
+      "pair": "SOLEUR",
+      "price": 93.4,
       "bullish": false,
-      "rsi": 54.65
-    },
-    "FIL": {
-      "pair": "FILEUR",
-      "price": 1.024,
-      "bullish": false,
-      "rsi": 60.0
-    },
-    "LINK": {
-      "pair": "LINKEUR",
-      "price": 10.9782,
-      "bullish": false,
-      "rsi": 46.05
-    },
-    "ALGO": {
-      "pair": "ALGOEUR",
-      "price": 0.10325,
-      "bullish": false,
-      "rsi": 50.24
-    },
-    "XLM": {
-      "pair": "XLMEUR",
-      "price": 0.160015,
-      "bullish": false,
-      "rsi": 40.19
+      "rsi": 51.27
     },
     "DOGE": {
       "pair": "XDGEUR",
-      "price": 0.0715752,
+      "price": 0.0717545,
       "bullish": false,
-      "rsi": 38.62
+      "rsi": 42.19
     },
-    "ETC": {
-      "pair": "ETCEUR",
-      "price": 7.092,
+    "AVAX": {
+      "pair": "AVAXEUR",
+      "price": 8.896,
       "bullish": false,
-      "rsi": 46.77
+      "rsi": 48.83
+    },
+    "ATOM": {
+      "pair": "ATOMEUR",
+      "price": 1.5419,
+      "bullish": false,
+      "rsi": 44.62
+    },
+    "XLM": {
+      "pair": "XLMEUR",
+      "price": 0.159825,
+      "bullish": false,
+      "rsi": 43.11
+    },
+    "ALGO": {
+      "pair": "ALGOEUR",
+      "price": 0.10072,
+      "bullish": false,
+      "rsi": 45.98
+    },
+    "LINK": {
+      "pair": "LINKEUR",
+      "price": 10.88863,
+      "bullish": false,
+      "rsi": 44.51
+    },
+    "UNI": {
+      "pair": "UNIEUR",
+      "price": 6.4976,
+      "bullish": false,
+      "rsi": 53.04
     },
     "NEAR": {
       "pair": "NEAREUR",
-      "price": 4.5122,
+      "price": 4.5388,
       "bullish": false,
-      "rsi": 55.78
+      "rsi": 55.02
     },
     "BCH": {
       "pair": "BCHEUR",
-      "price": 250.52,
+      "price": 247.46,
       "bullish": false,
-      "rsi": 59.82
+      "rsi": 58.36
+    },
+    "ETC": {
+      "pair": "ETCEUR",
+      "price": 7.042,
+      "bullish": false,
+      "rsi": 45.14
     },
     "ICP": {
       "pair": "ICPEUR",
-      "price": 2.688,
+      "price": 2.662,
       "bullish": false,
-      "rsi": 50.99
-    },
-    "MANA": {
-      "pair": "MANAEUR",
-      "price": 0.07888,
-      "bullish": false,
-      "rsi": 45.32
-    },
-    "KSM": {
-      "pair": "KSMEUR",
-      "price": 3.96,
-      "bullish": false,
-      "rsi": 44.71
-    },
-    "SAND": {
-      "pair": "SANDEUR",
-      "price": 0.0496,
-      "bullish": false,
-      "rsi": 50.52
+      "rsi": 44.59
     },
     "XTZ": {
       "pair": "XTZEUR",
-      "price": 0.283,
+      "price": 0.2792,
       "bullish": true,
-      "rsi": 53.79
+      "rsi": 52.38
     },
-    "COMP": {
-      "pair": "COMPEUR",
-      "price": 19.7,
+    "SNX": {
+      "pair": "SNXEUR",
+      "price": 0.1978,
       "bullish": false,
-      "rsi": 43.93
+      "rsi": 41.53
+    },
+    "MANA": {
+      "pair": "MANAEUR",
+      "price": 0.07907,
+      "bullish": false,
+      "rsi": 46.33
     },
     "FLOW": {
       "pair": "FLOWEUR",
       "price": 0.0285,
       "bullish": false,
-      "rsi": 54.93
+      "rsi": 52.24
     },
-    "SNX": {
-      "pair": "SNXEUR",
-      "price": 0.1995,
+    "SAND": {
+      "pair": "SANDEUR",
+      "price": 0.0523,
       "bullish": false,
-      "rsi": 43.96
+      "rsi": 60.33
+    },
+    "COMP": {
+      "pair": "COMPEUR",
+      "price": 19.62,
+      "bullish": false,
+      "rsi": 40.06
+    },
+    "KSM": {
+      "pair": "KSMEUR",
+      "price": 3.92,
+      "bullish": false,
+      "rsi": 41.38
     },
     "KAVA": {
       "pair": "KAVAEUR",
-      "price": 0.0625,
+      "price": 0.0628,
       "bullish": true,
-      "rsi": 53.49
+      "rsi": 65.0
     }
   }
 }
