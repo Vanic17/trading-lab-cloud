@@ -2,133 +2,138 @@
   "portfolio": "conservative_v2",
   "experiment": "EXP-002-P2 · Prudente 2.0",
   "version": "2.0.0",
-  "generatedAt": "2026-10-24T17:40:23Z",
+  "generatedAt": "2026-10-24T22:00:28Z",
   "coverage": {
     "configured": 30,
     "eligible": 28,
     "skipped": [
       {
-        "symbol": "MKR",
+        "symbol": "EOS",
         "reason": "EQuery:Invalid asset pair"
       },
       {
-        "symbol": "EOS",
+        "symbol": "MKR",
         "reason": "EQuery:Invalid asset pair"
       }
     ]
   },
-  "cash": 245.43,
-  "positionsValue": 161.92,
-  "equity": 407.34,
-  "pnl": -92.66,
+  "cash": 327.31,
+  "positionsValue": 81.69,
+  "equity": 409.0,
+  "pnl": -91.0,
   "openPositions": {
-    "BTC": {
-      "units": 0.0011430671428270412,
-      "entryPrice": 75279.8,
-      "openedAt": "2026-10-21T18:59:07Z"
-    },
     "BCH": {
       "units": 0.3334307201997513,
       "entryPrice": 257.94,
       "openedAt": "2026-10-21T18:59:07Z"
     }
   },
-  "actions": [],
+  "actions": [
+    {
+      "at": "2026-10-24T22:00:28Z",
+      "side": "SELL",
+      "symbol": "BTC",
+      "price": 71821.7,
+      "units": 0.0011430671428270412,
+      "fee": 0.21,
+      "reason": "trend reversal"
+    }
+  ],
   "decisions": [
     {
       "symbol": "BTC",
-      "decision": "HOLD",
-      "reason": "position remains within exit rules"
+      "decision": "SELL",
+      "reason": "trend reversal"
     },
     {
       "symbol": "ETH",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "SOL",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "XRP",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "ADA",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "DOGE",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "DOT",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "AVAX",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "LINK",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "LTC",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "XLM",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "ATOM",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "ALGO",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "UNI",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "AAVE",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "FIL",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "NEAR",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "ICP",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "ETC",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "BCH",
@@ -143,12 +148,12 @@
     {
       "symbol": "SAND",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "MANA",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "EOS",
@@ -158,190 +163,148 @@
     {
       "symbol": "XTZ",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "FLOW",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "KSM",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "KAVA",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "SNX",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     },
     {
       "symbol": "COMP",
       "decision": "SKIP",
-      "reason": "cooldown after exit until 2026-10-24T19:31:08Z"
+      "reason": "cooldown: no entries in an exit cycle"
     }
   ],
   "market": {
-    "SOL": {
-      "pair": "SOLEUR",
-      "price": 89.07,
+    "DOGE": {
+      "pair": "XDGEUR",
+      "price": 0.068821,
       "bullish": false,
-      "rsi": 22.3
-    },
-    "UNI": {
-      "pair": "UNIEUR",
-      "price": 5.8983,
-      "bullish": false,
-      "rsi": 25.89
-    },
-    "ATOM": {
-      "pair": "ATOMEUR",
-      "price": 1.4485,
-      "bullish": false,
-      "rsi": 39.35
-    },
-    "LINK": {
-      "pair": "LINKEUR",
-      "price": 10.1623,
-      "bullish": false,
-      "rsi": 21.57
+      "rsi": 37.32
     },
     "DOT": {
       "pair": "DOTEUR",
-      "price": 0.9278,
+      "price": 0.9292,
       "bullish": false,
-      "rsi": 37.19
+      "rsi": 32.31
     },
-    "ALGO": {
-      "pair": "ALGOEUR",
-      "price": 0.09103,
+    "ATOM": {
+      "pair": "ATOMEUR",
+      "price": 1.4648,
       "bullish": false,
-      "rsi": 22.14
-    },
-    "LTC": {
-      "pair": "LTCEUR",
-      "price": 49.77,
-      "bullish": false,
-      "rsi": 13.46
-    },
-    "XRP": {
-      "pair": "XRPEUR",
-      "price": 1.13192,
-      "bullish": true,
-      "rsi": 18.41
-    },
-    "ADA": {
-      "pair": "ADAEUR",
-      "price": 0.181845,
-      "bullish": false,
-      "rsi": 24.58
-    },
-    "DOGE": {
-      "pair": "XDGEUR",
-      "price": 0.0676066,
-      "bullish": false,
-      "rsi": 25.61
-    },
-    "ETH": {
-      "pair": "ETHEUR",
-      "price": 2059.63,
-      "bullish": false,
-      "rsi": 17.78
-    },
-    "AAVE": {
-      "pair": "AAVEEUR",
-      "price": 120.77,
-      "bullish": false,
-      "rsi": 17.63
+      "rsi": 41.43
     },
     "BTC": {
       "pair": "XBTEUR",
-      "price": 71235.8,
-      "bullish": true,
-      "rsi": 20.01
-    },
-    "FIL": {
-      "pair": "FILEUR",
-      "price": 0.828,
+      "price": 71821.7,
       "bullish": false,
-      "rsi": 26.81
+      "rsi": 34.33
+    },
+    "ADA": {
+      "pair": "ADAEUR",
+      "price": 0.184163,
+      "bullish": false,
+      "rsi": 31.6
+    },
+    "SOL": {
+      "pair": "SOLEUR",
+      "price": 90.3,
+      "bullish": false,
+      "rsi": 31.31
+    },
+    "LINK": {
+      "pair": "LINKEUR",
+      "price": 10.30092,
+      "bullish": false,
+      "rsi": 32.05
+    },
+    "ETH": {
+      "pair": "ETHEUR",
+      "price": 2087.84,
+      "bullish": false,
+      "rsi": 33.79
     },
     "AVAX": {
       "pair": "AVAXEUR",
-      "price": 7.861,
+      "price": 7.941,
       "bullish": false,
-      "rsi": 20.99
+      "rsi": 30.06
+    },
+    "UNI": {
+      "pair": "UNIEUR",
+      "price": 6.0446,
+      "bullish": false,
+      "rsi": 36.89
+    },
+    "ALGO": {
+      "pair": "ALGOEUR",
+      "price": 0.09238,
+      "bullish": false,
+      "rsi": 27.04
     },
     "XLM": {
       "pair": "XLMEUR",
-      "price": 0.150387,
+      "price": 0.151915,
       "bullish": false,
-      "rsi": 17.88
+      "rsi": 26.62
     },
-    "BCH": {
-      "pair": "BCHEUR",
-      "price": 241.4,
-      "bullish": true,
-      "rsi": 43.28
-    },
-    "FLOW": {
-      "pair": "FLOWEUR",
-      "price": 0.0239,
+    "LTC": {
+      "pair": "LTCEUR",
+      "price": 50.56,
       "bullish": false,
-      "rsi": 11.76
+      "rsi": 26.79
     },
-    "NEAR": {
-      "pair": "NEAREUR",
-      "price": 3.9385,
+    "AAVE": {
+      "pair": "AAVEEUR",
+      "price": 121.81,
       "bullish": false,
-      "rsi": 13.71
+      "rsi": 23.33
     },
-    "KSM": {
-      "pair": "KSMEUR",
-      "price": 3.39,
+    "FIL": {
+      "pair": "FILEUR",
+      "price": 0.832,
       "bullish": false,
-      "rsi": 39.66
-    },
-    "ICP": {
-      "pair": "ICPEUR",
-      "price": 2.329,
-      "bullish": false,
-      "rsi": 26.63
-    },
-    "XTZ": {
-      "pair": "XTZEUR",
-      "price": 0.2583,
-      "bullish": true,
-      "rsi": 23.66
-    },
-    "SAND": {
-      "pair": "SANDEUR",
-      "price": 0.044,
-      "bullish": false,
-      "rsi": 17.39
-    },
-    "ETC": {
-      "pair": "ETCEUR",
-      "price": 6.65,
-      "bullish": true,
-      "rsi": 29.66
+      "rsi": 27.34
     },
     "MANA": {
       "pair": "MANAEUR",
-      "price": 0.0698,
+      "price": 0.07008,
       "bullish": false,
-      "rsi": 24.04
+      "rsi": 26.16
     },
-    "COMP": {
-      "pair": "COMPEUR",
-      "price": 20.82,
+    "BCH": {
+      "pair": "BCHEUR",
+      "price": 244.99,
       "bullish": true,
-      "rsi": 24.75
+      "rsi": 47.66
+    },
+    "ETC": {
+      "pair": "ETCEUR",
+      "price": 6.812,
+      "bullish": true,
+      "rsi": 41.75
+    },
+    "NEAR": {
+      "pair": "NEAREUR",
+      "price": 3.9786,
+      "bullish": false,
+      "rsi": 18.78
     },
     "KAVA": {
       "pair": "KAVAEUR",
@@ -349,11 +312,53 @@
       "bullish": false,
       "rsi": 59.26
     },
+    "SAND": {
+      "pair": "SANDEUR",
+      "price": 0.0442,
+      "bullish": false,
+      "rsi": 17.39
+    },
+    "XRP": {
+      "pair": "XRPEUR",
+      "price": 1.15011,
+      "bullish": true,
+      "rsi": 34.13
+    },
+    "KSM": {
+      "pair": "KSMEUR",
+      "price": 3.44,
+      "bullish": false,
+      "rsi": 40.68
+    },
+    "ICP": {
+      "pair": "ICPEUR",
+      "price": 2.36,
+      "bullish": false,
+      "rsi": 32.61
+    },
+    "XTZ": {
+      "pair": "XTZEUR",
+      "price": 0.26266,
+      "bullish": false,
+      "rsi": 35.53
+    },
+    "COMP": {
+      "pair": "COMPEUR",
+      "price": 21.02,
+      "bullish": true,
+      "rsi": 24.24
+    },
+    "FLOW": {
+      "pair": "FLOWEUR",
+      "price": 0.0242,
+      "bullish": false,
+      "rsi": 22.58
+    },
     "SNX": {
       "pair": "SNXEUR",
-      "price": 0.1739,
+      "price": 0.1783,
       "bullish": false,
-      "rsi": 15.32
+      "rsi": 27.78
     }
   }
 }
