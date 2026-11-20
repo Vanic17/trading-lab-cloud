@@ -1,21 +1,21 @@
 {
-  "updatedAt": "2026-11-20T10:24:49Z",
+  "updatedAt": "2026-11-20T18:46:15Z",
   "portfolios": {
     "conservative": {
       "portfolio": "conservative",
       "experiment": "EXP-002 · Crypto 30",
       "version": "1.0.0",
-      "generatedAt": "2026-11-20T10:24:49Z",
+      "generatedAt": "2026-11-20T18:46:15Z",
       "coverage": {
         "configured": 30,
         "eligible": 28,
         "skipped": [
           {
-            "symbol": "EOS",
+            "symbol": "MKR",
             "reason": "EQuery:Invalid asset pair"
           },
           {
-            "symbol": "MKR",
+            "symbol": "EOS",
             "reason": "EQuery:Invalid asset pair"
           }
         ]
@@ -100,7 +100,7 @@
         {
           "symbol": "AAVE",
           "decision": "SKIP",
-          "reason": "RSI below entry range"
+          "reason": "trend not positive"
         },
         {
           "symbol": "FIL",
@@ -179,173 +179,173 @@
         }
       ],
       "market": {
-        "ETH": {
-          "pair": "ETHEUR",
-          "price": 1594.47,
-          "bullish": false,
-          "rsi": 32.7
-        },
-        "ADA": {
-          "pair": "ADAEUR",
-          "price": 0.136296,
-          "bullish": false,
-          "rsi": 31.71
-        },
         "BTC": {
           "pair": "XBTEUR",
-          "price": 56308.1,
+          "price": 54108.3,
           "bullish": false,
-          "rsi": 26.95
-        },
-        "UNI": {
-          "pair": "UNIEUR",
-          "price": 4.4299,
-          "bullish": false,
-          "rsi": 28.46
-        },
-        "ALGO": {
-          "pair": "ALGOEUR",
-          "price": 0.0696,
-          "bullish": false,
-          "rsi": 26.12
-        },
-        "FIL": {
-          "pair": "FILEUR",
-          "price": 0.513,
-          "bullish": false,
-          "rsi": 32.46
-        },
-        "XLM": {
-          "pair": "XLMEUR",
-          "price": 0.122007,
-          "bullish": false,
-          "rsi": 28.51
-        },
-        "LINK": {
-          "pair": "LINKEUR",
-          "price": 8.07704,
-          "bullish": false,
-          "rsi": 25.47
-        },
-        "XRP": {
-          "pair": "XRPEUR",
-          "price": 0.87829,
-          "bullish": false,
-          "rsi": 42.0
-        },
-        "ATOM": {
-          "pair": "ATOMEUR",
-          "price": 1.1529,
-          "bullish": false,
-          "rsi": 31.38
-        },
-        "SOL": {
-          "pair": "SOLEUR",
-          "price": 66.15,
-          "bullish": false,
-          "rsi": 32.07
+          "rsi": 15.79
         },
         "AVAX": {
           "pair": "AVAXEUR",
-          "price": 6.286,
+          "price": 5.905,
           "bullish": false,
-          "rsi": 28.91
-        },
-        "DOGE": {
-          "pair": "XDGEUR",
-          "price": 0.0523748,
-          "bullish": false,
-          "rsi": 26.02
+          "rsi": 17.82
         },
         "LTC": {
           "pair": "LTCEUR",
-          "price": 38.07,
+          "price": 36.32,
           "bullish": false,
-          "rsi": 19.66
+          "rsi": 13.62
         },
-        "DOT": {
-          "pair": "DOTEUR",
-          "price": 0.6402,
+        "LINK": {
+          "pair": "LINKEUR",
+          "price": 7.58961,
           "bullish": false,
-          "rsi": 26.03
+          "rsi": 11.27
+        },
+        "DOGE": {
+          "pair": "XDGEUR",
+          "price": 0.0489188,
+          "bullish": false,
+          "rsi": 11.23
+        },
+        "XLM": {
+          "pair": "XLMEUR",
+          "price": 0.11556,
+          "bullish": false,
+          "rsi": 12.08
+        },
+        "ADA": {
+          "pair": "ADAEUR",
+          "price": 0.127264,
+          "bullish": false,
+          "rsi": 14.61
+        },
+        "XRP": {
+          "pair": "XRPEUR",
+          "price": 0.82841,
+          "bullish": false,
+          "rsi": 16.02
+        },
+        "FIL": {
+          "pair": "FILEUR",
+          "price": 0.473,
+          "bullish": false,
+          "rsi": 23.94
+        },
+        "UNI": {
+          "pair": "UNIEUR",
+          "price": 4.0727,
+          "bullish": false,
+          "rsi": 18.88
+        },
+        "ATOM": {
+          "pair": "ATOMEUR",
+          "price": 1.1038,
+          "bullish": false,
+          "rsi": 24.8
+        },
+        "SOL": {
+          "pair": "SOLEUR",
+          "price": 62.17,
+          "bullish": false,
+          "rsi": 16.45
+        },
+        "ALGO": {
+          "pair": "ALGOEUR",
+          "price": 0.06622,
+          "bullish": false,
+          "rsi": 16.15
         },
         "AAVE": {
           "pair": "AAVEEUR",
-          "price": 94.39,
-          "bullish": true,
-          "rsi": 23.86
-        },
-        "ICP": {
-          "pair": "ICPEUR",
-          "price": 1.95,
+          "price": 88.25,
           "bullish": false,
-          "rsi": 31.94
+          "rsi": 17.82
         },
-        "ETC": {
-          "pair": "ETCEUR",
-          "price": 5.227,
+        "DOT": {
+          "pair": "DOTEUR",
+          "price": 0.6011,
           "bullish": false,
-          "rsi": 31.17
+          "rsi": 17.37
         },
-        "MANA": {
-          "pair": "MANAEUR",
-          "price": 0.05384,
+        "ETH": {
+          "pair": "ETHEUR",
+          "price": 1505.27,
           "bullish": false,
-          "rsi": 24.37
+          "rsi": 19.39
         },
         "NEAR": {
           "pair": "NEAREUR",
-          "price": 2.7679,
+          "price": 2.5885,
           "bullish": false,
-          "rsi": 28.21
+          "rsi": 23.15
         },
-        "XTZ": {
-          "pair": "XTZEUR",
-          "price": 0.18301,
+        "ETC": {
+          "pair": "ETCEUR",
+          "price": 4.916,
           "bullish": false,
-          "rsi": 30.52
-        },
-        "KSM": {
-          "pair": "KSMEUR",
-          "price": 2.39,
-          "bullish": false,
-          "rsi": 33.33
-        },
-        "SAND": {
-          "pair": "SANDEUR",
-          "price": 0.0321,
-          "bullish": false,
-          "rsi": 36.59
+          "rsi": 9.08
         },
         "BCH": {
           "pair": "BCHEUR",
-          "price": 185.09,
+          "price": 174.09,
           "bullish": false,
-          "rsi": 31.73
+          "rsi": 22.85
         },
-        "COMP": {
-          "pair": "COMPEUR",
-          "price": 15.98,
+        "ICP": {
+          "pair": "ICPEUR",
+          "price": 1.833,
           "bullish": false,
-          "rsi": 37.58
+          "rsi": 18.98
         },
-        "SNX": {
-          "pair": "SNXEUR",
-          "price": 0.1441,
-          "bullish": true,
-          "rsi": 51.52
-        },
-        "FLOW": {
-          "pair": "FLOWEUR",
-          "price": 0.014,
+        "XTZ": {
+          "pair": "XTZEUR",
+          "price": 0.17779,
           "bullish": false,
-          "rsi": 40.0
+          "rsi": 27.36
+        },
+        "KSM": {
+          "pair": "KSMEUR",
+          "price": 2.24,
+          "bullish": false,
+          "rsi": 18.0
+        },
+        "SAND": {
+          "pair": "SANDEUR",
+          "price": 0.0299,
+          "bullish": false,
+          "rsi": 26.32
+        },
+        "MANA": {
+          "pair": "MANAEUR",
+          "price": 0.05075,
+          "bullish": false,
+          "rsi": 15.35
         },
         "KAVA": {
           "pair": "KAVAEUR",
-          "price": 0.0266,
+          "price": 0.0251,
           "bullish": false,
-          "rsi": 54.43
+          "rsi": 35.44
+        },
+        "FLOW": {
+          "pair": "FLOWEUR",
+          "price": 0.0131,
+          "bullish": false,
+          "rsi": 25.0
+        },
+        "SNX": {
+          "pair": "SNXEUR",
+          "price": 0.1332,
+          "bullish": true,
+          "rsi": 39.24
+        },
+        "COMP": {
+          "pair": "COMPEUR",
+          "price": 15.28,
+          "bullish": false,
+          "rsi": 21.67
         }
       }
     },
@@ -353,25 +353,25 @@
       "portfolio": "aggressive",
       "experiment": "EXP-002-A · Crypto 30 Aggressive",
       "version": "1.0.0",
-      "generatedAt": "2026-11-20T10:24:49Z",
+      "generatedAt": "2026-11-20T18:46:15Z",
       "coverage": {
         "configured": 30,
         "eligible": 28,
         "skipped": [
           {
-            "symbol": "EOS",
+            "symbol": "MKR",
             "reason": "EQuery:Invalid asset pair"
           },
           {
-            "symbol": "MKR",
+            "symbol": "EOS",
             "reason": "EQuery:Invalid asset pair"
           }
         ]
       },
-      "cash": 0.0,
-      "positionsValue": 279.13,
-      "equity": 279.13,
-      "pnl": -220.87,
+      "cash": 105.11,
+      "positionsValue": 154.04,
+      "equity": 259.15,
+      "pnl": -240.85,
       "openPositions": {
         "SNX": {
           "units": 881.0954063604241,
@@ -382,14 +382,19 @@
           "units": 0.5900156736868492,
           "entryPrice": 66.98,
           "openedAt": "2026-11-18T16:32:44Z"
-        },
-        "SAND": {
-          "units": 3524.569850017747,
-          "entryPrice": 0.033,
-          "openedAt": "2026-11-20T02:32:35Z"
         }
       },
-      "actions": [],
+      "actions": [
+        {
+          "at": "2026-11-20T18:46:15Z",
+          "side": "SELL",
+          "symbol": "SAND",
+          "price": 0.0299,
+          "units": 3524.569850017747,
+          "fee": 0.27,
+          "reason": "trend reversal"
+        }
+      ],
       "decisions": [
         {
           "symbol": "BTC",
@@ -409,7 +414,7 @@
         {
           "symbol": "XRP",
           "decision": "SKIP",
-          "reason": "RSI below entry range"
+          "reason": "trend not positive"
         },
         {
           "symbol": "ADA",
@@ -474,7 +479,7 @@
         {
           "symbol": "NEAR",
           "decision": "SKIP",
-          "reason": "RSI below entry range"
+          "reason": "trend not positive"
         },
         {
           "symbol": "ICP",
@@ -498,8 +503,8 @@
         },
         {
           "symbol": "SAND",
-          "decision": "HOLD",
-          "reason": "position remains within exit rules"
+          "decision": "SELL",
+          "reason": "trend reversal"
         },
         {
           "symbol": "MANA",
@@ -543,173 +548,173 @@
         }
       ],
       "market": {
-        "ETH": {
-          "pair": "ETHEUR",
-          "price": 1594.47,
-          "bullish": false,
-          "rsi": 32.7
-        },
-        "ADA": {
-          "pair": "ADAEUR",
-          "price": 0.136296,
-          "bullish": false,
-          "rsi": 31.71
-        },
         "BTC": {
           "pair": "XBTEUR",
-          "price": 56308.1,
+          "price": 54108.3,
           "bullish": false,
-          "rsi": 26.95
-        },
-        "UNI": {
-          "pair": "UNIEUR",
-          "price": 4.4299,
-          "bullish": false,
-          "rsi": 28.46
-        },
-        "ALGO": {
-          "pair": "ALGOEUR",
-          "price": 0.0696,
-          "bullish": false,
-          "rsi": 26.12
-        },
-        "FIL": {
-          "pair": "FILEUR",
-          "price": 0.513,
-          "bullish": false,
-          "rsi": 32.46
-        },
-        "XLM": {
-          "pair": "XLMEUR",
-          "price": 0.122007,
-          "bullish": false,
-          "rsi": 28.51
-        },
-        "LINK": {
-          "pair": "LINKEUR",
-          "price": 8.07704,
-          "bullish": false,
-          "rsi": 25.47
-        },
-        "XRP": {
-          "pair": "XRPEUR",
-          "price": 0.87829,
-          "bullish": true,
-          "rsi": 42.0
-        },
-        "ATOM": {
-          "pair": "ATOMEUR",
-          "price": 1.1529,
-          "bullish": false,
-          "rsi": 31.38
-        },
-        "SOL": {
-          "pair": "SOLEUR",
-          "price": 66.15,
-          "bullish": true,
-          "rsi": 32.07
+          "rsi": 15.79
         },
         "AVAX": {
           "pair": "AVAXEUR",
-          "price": 6.286,
+          "price": 5.905,
           "bullish": false,
-          "rsi": 28.91
-        },
-        "DOGE": {
-          "pair": "XDGEUR",
-          "price": 0.0523748,
-          "bullish": false,
-          "rsi": 26.02
+          "rsi": 17.82
         },
         "LTC": {
           "pair": "LTCEUR",
-          "price": 38.07,
+          "price": 36.32,
           "bullish": false,
-          "rsi": 19.66
+          "rsi": 13.62
         },
-        "DOT": {
-          "pair": "DOTEUR",
-          "price": 0.6402,
+        "LINK": {
+          "pair": "LINKEUR",
+          "price": 7.58961,
           "bullish": false,
-          "rsi": 26.03
+          "rsi": 11.27
+        },
+        "DOGE": {
+          "pair": "XDGEUR",
+          "price": 0.0489188,
+          "bullish": false,
+          "rsi": 11.23
+        },
+        "XLM": {
+          "pair": "XLMEUR",
+          "price": 0.11556,
+          "bullish": false,
+          "rsi": 12.08
+        },
+        "ADA": {
+          "pair": "ADAEUR",
+          "price": 0.127264,
+          "bullish": false,
+          "rsi": 14.61
+        },
+        "XRP": {
+          "pair": "XRPEUR",
+          "price": 0.82841,
+          "bullish": false,
+          "rsi": 16.02
+        },
+        "FIL": {
+          "pair": "FILEUR",
+          "price": 0.473,
+          "bullish": false,
+          "rsi": 23.94
+        },
+        "UNI": {
+          "pair": "UNIEUR",
+          "price": 4.0727,
+          "bullish": false,
+          "rsi": 18.88
+        },
+        "ATOM": {
+          "pair": "ATOMEUR",
+          "price": 1.1038,
+          "bullish": false,
+          "rsi": 24.8
+        },
+        "SOL": {
+          "pair": "SOLEUR",
+          "price": 62.17,
+          "bullish": true,
+          "rsi": 16.45
+        },
+        "ALGO": {
+          "pair": "ALGOEUR",
+          "price": 0.06622,
+          "bullish": false,
+          "rsi": 16.15
         },
         "AAVE": {
           "pair": "AAVEEUR",
-          "price": 94.39,
+          "price": 88.25,
           "bullish": false,
-          "rsi": 23.86
+          "rsi": 17.82
         },
-        "ICP": {
-          "pair": "ICPEUR",
-          "price": 1.95,
+        "DOT": {
+          "pair": "DOTEUR",
+          "price": 0.6011,
           "bullish": false,
-          "rsi": 31.94
+          "rsi": 17.37
         },
-        "ETC": {
-          "pair": "ETCEUR",
-          "price": 5.227,
+        "ETH": {
+          "pair": "ETHEUR",
+          "price": 1505.27,
           "bullish": false,
-          "rsi": 31.17
-        },
-        "MANA": {
-          "pair": "MANAEUR",
-          "price": 0.05384,
-          "bullish": false,
-          "rsi": 24.37
+          "rsi": 19.39
         },
         "NEAR": {
           "pair": "NEAREUR",
-          "price": 2.7679,
-          "bullish": true,
-          "rsi": 28.21
-        },
-        "XTZ": {
-          "pair": "XTZEUR",
-          "price": 0.18301,
+          "price": 2.5885,
           "bullish": false,
-          "rsi": 30.52
+          "rsi": 23.15
         },
-        "KSM": {
-          "pair": "KSMEUR",
-          "price": 2.39,
+        "ETC": {
+          "pair": "ETCEUR",
+          "price": 4.916,
           "bullish": false,
-          "rsi": 33.33
-        },
-        "SAND": {
-          "pair": "SANDEUR",
-          "price": 0.0321,
-          "bullish": true,
-          "rsi": 36.59
+          "rsi": 9.08
         },
         "BCH": {
           "pair": "BCHEUR",
-          "price": 185.09,
+          "price": 174.09,
           "bullish": false,
-          "rsi": 31.73
+          "rsi": 22.85
         },
-        "COMP": {
-          "pair": "COMPEUR",
-          "price": 15.98,
+        "ICP": {
+          "pair": "ICPEUR",
+          "price": 1.833,
           "bullish": false,
-          "rsi": 37.58
+          "rsi": 18.98
         },
-        "SNX": {
-          "pair": "SNXEUR",
-          "price": 0.1441,
-          "bullish": true,
-          "rsi": 51.52
-        },
-        "FLOW": {
-          "pair": "FLOWEUR",
-          "price": 0.014,
+        "XTZ": {
+          "pair": "XTZEUR",
+          "price": 0.17779,
           "bullish": false,
-          "rsi": 40.0
+          "rsi": 27.36
+        },
+        "KSM": {
+          "pair": "KSMEUR",
+          "price": 2.24,
+          "bullish": false,
+          "rsi": 18.0
+        },
+        "SAND": {
+          "pair": "SANDEUR",
+          "price": 0.0299,
+          "bullish": false,
+          "rsi": 26.32
+        },
+        "MANA": {
+          "pair": "MANAEUR",
+          "price": 0.05075,
+          "bullish": false,
+          "rsi": 15.35
         },
         "KAVA": {
           "pair": "KAVAEUR",
-          "price": 0.0266,
+          "price": 0.0251,
           "bullish": false,
-          "rsi": 54.43
+          "rsi": 35.44
+        },
+        "FLOW": {
+          "pair": "FLOWEUR",
+          "price": 0.0131,
+          "bullish": false,
+          "rsi": 25.0
+        },
+        "SNX": {
+          "pair": "SNXEUR",
+          "price": 0.1332,
+          "bullish": true,
+          "rsi": 39.24
+        },
+        "COMP": {
+          "pair": "COMPEUR",
+          "price": 15.28,
+          "bullish": false,
+          "rsi": 21.67
         }
       }
     },
@@ -717,17 +722,17 @@
       "portfolio": "conservative_v2",
       "experiment": "EXP-002-P2 · Prudente 2.0",
       "version": "2.0.0",
-      "generatedAt": "2026-11-20T10:24:49Z",
+      "generatedAt": "2026-11-20T18:46:15Z",
       "coverage": {
         "configured": 30,
         "eligible": 28,
         "skipped": [
           {
-            "symbol": "EOS",
+            "symbol": "MKR",
             "reason": "EQuery:Invalid asset pair"
           },
           {
-            "symbol": "MKR",
+            "symbol": "EOS",
             "reason": "EQuery:Invalid asset pair"
           }
         ]
@@ -891,173 +896,173 @@
         }
       ],
       "market": {
-        "ETH": {
-          "pair": "ETHEUR",
-          "price": 1594.47,
-          "bullish": false,
-          "rsi": 32.7
-        },
-        "ADA": {
-          "pair": "ADAEUR",
-          "price": 0.136296,
-          "bullish": false,
-          "rsi": 31.71
-        },
         "BTC": {
           "pair": "XBTEUR",
-          "price": 56308.1,
+          "price": 54108.3,
           "bullish": false,
-          "rsi": 26.95
-        },
-        "UNI": {
-          "pair": "UNIEUR",
-          "price": 4.4299,
-          "bullish": false,
-          "rsi": 28.46
-        },
-        "ALGO": {
-          "pair": "ALGOEUR",
-          "price": 0.0696,
-          "bullish": false,
-          "rsi": 26.12
-        },
-        "FIL": {
-          "pair": "FILEUR",
-          "price": 0.513,
-          "bullish": false,
-          "rsi": 32.46
-        },
-        "XLM": {
-          "pair": "XLMEUR",
-          "price": 0.122007,
-          "bullish": false,
-          "rsi": 28.51
-        },
-        "LINK": {
-          "pair": "LINKEUR",
-          "price": 8.07704,
-          "bullish": false,
-          "rsi": 25.47
-        },
-        "XRP": {
-          "pair": "XRPEUR",
-          "price": 0.87829,
-          "bullish": false,
-          "rsi": 42.0
-        },
-        "ATOM": {
-          "pair": "ATOMEUR",
-          "price": 1.1529,
-          "bullish": false,
-          "rsi": 31.38
-        },
-        "SOL": {
-          "pair": "SOLEUR",
-          "price": 66.15,
-          "bullish": false,
-          "rsi": 32.07
+          "rsi": 15.79
         },
         "AVAX": {
           "pair": "AVAXEUR",
-          "price": 6.286,
+          "price": 5.905,
           "bullish": false,
-          "rsi": 28.91
-        },
-        "DOGE": {
-          "pair": "XDGEUR",
-          "price": 0.0523748,
-          "bullish": false,
-          "rsi": 26.02
+          "rsi": 17.82
         },
         "LTC": {
           "pair": "LTCEUR",
-          "price": 38.07,
+          "price": 36.32,
           "bullish": false,
-          "rsi": 19.66
+          "rsi": 13.62
         },
-        "DOT": {
-          "pair": "DOTEUR",
-          "price": 0.6402,
+        "LINK": {
+          "pair": "LINKEUR",
+          "price": 7.58961,
           "bullish": false,
-          "rsi": 26.03
+          "rsi": 11.27
+        },
+        "DOGE": {
+          "pair": "XDGEUR",
+          "price": 0.0489188,
+          "bullish": false,
+          "rsi": 11.23
+        },
+        "XLM": {
+          "pair": "XLMEUR",
+          "price": 0.11556,
+          "bullish": false,
+          "rsi": 12.08
+        },
+        "ADA": {
+          "pair": "ADAEUR",
+          "price": 0.127264,
+          "bullish": false,
+          "rsi": 14.61
+        },
+        "XRP": {
+          "pair": "XRPEUR",
+          "price": 0.82841,
+          "bullish": false,
+          "rsi": 16.02
+        },
+        "FIL": {
+          "pair": "FILEUR",
+          "price": 0.473,
+          "bullish": false,
+          "rsi": 23.94
+        },
+        "UNI": {
+          "pair": "UNIEUR",
+          "price": 4.0727,
+          "bullish": false,
+          "rsi": 18.88
+        },
+        "ATOM": {
+          "pair": "ATOMEUR",
+          "price": 1.1038,
+          "bullish": false,
+          "rsi": 24.8
+        },
+        "SOL": {
+          "pair": "SOLEUR",
+          "price": 62.17,
+          "bullish": false,
+          "rsi": 16.45
+        },
+        "ALGO": {
+          "pair": "ALGOEUR",
+          "price": 0.06622,
+          "bullish": false,
+          "rsi": 16.15
         },
         "AAVE": {
           "pair": "AAVEEUR",
-          "price": 94.39,
-          "bullish": true,
-          "rsi": 23.86
-        },
-        "ICP": {
-          "pair": "ICPEUR",
-          "price": 1.95,
+          "price": 88.25,
           "bullish": false,
-          "rsi": 31.94
+          "rsi": 17.82
         },
-        "ETC": {
-          "pair": "ETCEUR",
-          "price": 5.227,
+        "DOT": {
+          "pair": "DOTEUR",
+          "price": 0.6011,
           "bullish": false,
-          "rsi": 31.17
+          "rsi": 17.37
         },
-        "MANA": {
-          "pair": "MANAEUR",
-          "price": 0.05384,
+        "ETH": {
+          "pair": "ETHEUR",
+          "price": 1505.27,
           "bullish": false,
-          "rsi": 24.37
+          "rsi": 19.39
         },
         "NEAR": {
           "pair": "NEAREUR",
-          "price": 2.7679,
+          "price": 2.5885,
           "bullish": false,
-          "rsi": 28.21
+          "rsi": 23.15
         },
-        "XTZ": {
-          "pair": "XTZEUR",
-          "price": 0.18301,
+        "ETC": {
+          "pair": "ETCEUR",
+          "price": 4.916,
           "bullish": false,
-          "rsi": 30.52
-        },
-        "KSM": {
-          "pair": "KSMEUR",
-          "price": 2.39,
-          "bullish": false,
-          "rsi": 33.33
-        },
-        "SAND": {
-          "pair": "SANDEUR",
-          "price": 0.0321,
-          "bullish": false,
-          "rsi": 36.59
+          "rsi": 9.08
         },
         "BCH": {
           "pair": "BCHEUR",
-          "price": 185.09,
+          "price": 174.09,
           "bullish": false,
-          "rsi": 31.73
+          "rsi": 22.85
         },
-        "COMP": {
-          "pair": "COMPEUR",
-          "price": 15.98,
+        "ICP": {
+          "pair": "ICPEUR",
+          "price": 1.833,
           "bullish": false,
-          "rsi": 37.58
+          "rsi": 18.98
         },
-        "SNX": {
-          "pair": "SNXEUR",
-          "price": 0.1441,
-          "bullish": true,
-          "rsi": 51.52
-        },
-        "FLOW": {
-          "pair": "FLOWEUR",
-          "price": 0.014,
+        "XTZ": {
+          "pair": "XTZEUR",
+          "price": 0.17779,
           "bullish": false,
-          "rsi": 40.0
+          "rsi": 27.36
+        },
+        "KSM": {
+          "pair": "KSMEUR",
+          "price": 2.24,
+          "bullish": false,
+          "rsi": 18.0
+        },
+        "SAND": {
+          "pair": "SANDEUR",
+          "price": 0.0299,
+          "bullish": false,
+          "rsi": 26.32
+        },
+        "MANA": {
+          "pair": "MANAEUR",
+          "price": 0.05075,
+          "bullish": false,
+          "rsi": 15.35
         },
         "KAVA": {
           "pair": "KAVAEUR",
-          "price": 0.0266,
+          "price": 0.0251,
           "bullish": false,
-          "rsi": 54.43
+          "rsi": 35.44
+        },
+        "FLOW": {
+          "pair": "FLOWEUR",
+          "price": 0.0131,
+          "bullish": false,
+          "rsi": 25.0
+        },
+        "SNX": {
+          "pair": "SNXEUR",
+          "price": 0.1332,
+          "bullish": true,
+          "rsi": 39.24
+        },
+        "COMP": {
+          "pair": "COMPEUR",
+          "price": 15.28,
+          "bullish": false,
+          "rsi": 21.67
         }
       }
     },
@@ -1065,25 +1070,25 @@
       "portfolio": "aggressive_v2",
       "experiment": "EXP-002-A2 · Aggressive 2.0",
       "version": "2.0.0",
-      "generatedAt": "2026-11-20T10:24:49Z",
+      "generatedAt": "2026-11-20T18:46:15Z",
       "coverage": {
         "configured": 30,
         "eligible": 28,
         "skipped": [
           {
-            "symbol": "EOS",
+            "symbol": "MKR",
             "reason": "EQuery:Invalid asset pair"
           },
           {
-            "symbol": "MKR",
+            "symbol": "EOS",
             "reason": "EQuery:Invalid asset pair"
           }
         ]
       },
-      "cash": 86.2,
-      "positionsValue": 167.4,
-      "equity": 253.6,
-      "pnl": -246.4,
+      "cash": 123.26,
+      "positionsValue": 119.3,
+      "equity": 242.56,
+      "pnl": -257.44,
       "openPositions": {
         "SNX": {
           "units": 450.4129373975314,
@@ -1094,24 +1099,29 @@
           "units": 0.9538389303844615,
           "entryPrice": 66.68,
           "openedAt": "2026-11-18T23:04:00Z"
-        },
-        "XRP": {
-          "units": 44.86009656377069,
-          "entryPrice": 0.88111,
-          "openedAt": "2026-11-18T23:04:00Z"
         }
       },
-      "actions": [],
+      "actions": [
+        {
+          "at": "2026-11-20T18:46:15Z",
+          "side": "SELL",
+          "symbol": "XRP",
+          "price": 0.82841,
+          "units": 44.86009656377069,
+          "fee": 0.1,
+          "reason": "trend reversal"
+        }
+      ],
       "decisions": [
         {
           "symbol": "BTC",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "ETH",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "SOL",
@@ -1120,88 +1130,88 @@
         },
         {
           "symbol": "XRP",
-          "decision": "HOLD",
-          "reason": "position remains within exit rules"
+          "decision": "SELL",
+          "reason": "trend reversal"
         },
         {
           "symbol": "ADA",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "DOGE",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "DOT",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "AVAX",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "LINK",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "LTC",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "XLM",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "ATOM",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "ALGO",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "UNI",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "AAVE",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "FIL",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "NEAR",
           "decision": "SKIP",
-          "reason": "RSI below entry range"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "ICP",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "ETC",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "BCH",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "MKR",
@@ -1211,12 +1221,12 @@
         {
           "symbol": "SAND",
           "decision": "SKIP",
-          "reason": "RSI below entry range"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "MANA",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "EOS",
@@ -1226,22 +1236,22 @@
         {
           "symbol": "XTZ",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "FLOW",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "KSM",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "KAVA",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         },
         {
           "symbol": "SNX",
@@ -1251,177 +1261,177 @@
         {
           "symbol": "COMP",
           "decision": "SKIP",
-          "reason": "trend not positive"
+          "reason": "cooldown: no entries in an exit cycle"
         }
       ],
       "market": {
-        "ETH": {
-          "pair": "ETHEUR",
-          "price": 1594.47,
-          "bullish": false,
-          "rsi": 32.7
-        },
-        "ADA": {
-          "pair": "ADAEUR",
-          "price": 0.136296,
-          "bullish": false,
-          "rsi": 31.71
-        },
         "BTC": {
           "pair": "XBTEUR",
-          "price": 56308.1,
+          "price": 54108.3,
           "bullish": false,
-          "rsi": 26.95
-        },
-        "UNI": {
-          "pair": "UNIEUR",
-          "price": 4.4299,
-          "bullish": false,
-          "rsi": 28.46
-        },
-        "ALGO": {
-          "pair": "ALGOEUR",
-          "price": 0.0696,
-          "bullish": false,
-          "rsi": 26.12
-        },
-        "FIL": {
-          "pair": "FILEUR",
-          "price": 0.513,
-          "bullish": false,
-          "rsi": 32.46
-        },
-        "XLM": {
-          "pair": "XLMEUR",
-          "price": 0.122007,
-          "bullish": false,
-          "rsi": 28.51
-        },
-        "LINK": {
-          "pair": "LINKEUR",
-          "price": 8.07704,
-          "bullish": false,
-          "rsi": 25.47
-        },
-        "XRP": {
-          "pair": "XRPEUR",
-          "price": 0.87829,
-          "bullish": true,
-          "rsi": 42.0
-        },
-        "ATOM": {
-          "pair": "ATOMEUR",
-          "price": 1.1529,
-          "bullish": false,
-          "rsi": 31.38
-        },
-        "SOL": {
-          "pair": "SOLEUR",
-          "price": 66.15,
-          "bullish": true,
-          "rsi": 32.07
+          "rsi": 15.79
         },
         "AVAX": {
           "pair": "AVAXEUR",
-          "price": 6.286,
+          "price": 5.905,
           "bullish": false,
-          "rsi": 28.91
-        },
-        "DOGE": {
-          "pair": "XDGEUR",
-          "price": 0.0523748,
-          "bullish": false,
-          "rsi": 26.02
+          "rsi": 17.82
         },
         "LTC": {
           "pair": "LTCEUR",
-          "price": 38.07,
+          "price": 36.32,
           "bullish": false,
-          "rsi": 19.66
+          "rsi": 13.62
         },
-        "DOT": {
-          "pair": "DOTEUR",
-          "price": 0.6402,
+        "LINK": {
+          "pair": "LINKEUR",
+          "price": 7.58961,
           "bullish": false,
-          "rsi": 26.03
+          "rsi": 11.27
+        },
+        "DOGE": {
+          "pair": "XDGEUR",
+          "price": 0.0489188,
+          "bullish": false,
+          "rsi": 11.23
+        },
+        "XLM": {
+          "pair": "XLMEUR",
+          "price": 0.11556,
+          "bullish": false,
+          "rsi": 12.08
+        },
+        "ADA": {
+          "pair": "ADAEUR",
+          "price": 0.127264,
+          "bullish": false,
+          "rsi": 14.61
+        },
+        "XRP": {
+          "pair": "XRPEUR",
+          "price": 0.82841,
+          "bullish": false,
+          "rsi": 16.02
+        },
+        "FIL": {
+          "pair": "FILEUR",
+          "price": 0.473,
+          "bullish": false,
+          "rsi": 23.94
+        },
+        "UNI": {
+          "pair": "UNIEUR",
+          "price": 4.0727,
+          "bullish": false,
+          "rsi": 18.88
+        },
+        "ATOM": {
+          "pair": "ATOMEUR",
+          "price": 1.1038,
+          "bullish": false,
+          "rsi": 24.8
+        },
+        "SOL": {
+          "pair": "SOLEUR",
+          "price": 62.17,
+          "bullish": true,
+          "rsi": 16.45
+        },
+        "ALGO": {
+          "pair": "ALGOEUR",
+          "price": 0.06622,
+          "bullish": false,
+          "rsi": 16.15
         },
         "AAVE": {
           "pair": "AAVEEUR",
-          "price": 94.39,
+          "price": 88.25,
           "bullish": false,
-          "rsi": 23.86
+          "rsi": 17.82
         },
-        "ICP": {
-          "pair": "ICPEUR",
-          "price": 1.95,
+        "DOT": {
+          "pair": "DOTEUR",
+          "price": 0.6011,
           "bullish": false,
-          "rsi": 31.94
+          "rsi": 17.37
         },
-        "ETC": {
-          "pair": "ETCEUR",
-          "price": 5.227,
+        "ETH": {
+          "pair": "ETHEUR",
+          "price": 1505.27,
           "bullish": false,
-          "rsi": 31.17
-        },
-        "MANA": {
-          "pair": "MANAEUR",
-          "price": 0.05384,
-          "bullish": false,
-          "rsi": 24.37
+          "rsi": 19.39
         },
         "NEAR": {
           "pair": "NEAREUR",
-          "price": 2.7679,
-          "bullish": true,
-          "rsi": 28.21
-        },
-        "XTZ": {
-          "pair": "XTZEUR",
-          "price": 0.18301,
+          "price": 2.5885,
           "bullish": false,
-          "rsi": 30.52
+          "rsi": 23.15
         },
-        "KSM": {
-          "pair": "KSMEUR",
-          "price": 2.39,
+        "ETC": {
+          "pair": "ETCEUR",
+          "price": 4.916,
           "bullish": false,
-          "rsi": 33.33
-        },
-        "SAND": {
-          "pair": "SANDEUR",
-          "price": 0.0321,
-          "bullish": true,
-          "rsi": 36.59
+          "rsi": 9.08
         },
         "BCH": {
           "pair": "BCHEUR",
-          "price": 185.09,
+          "price": 174.09,
           "bullish": false,
-          "rsi": 31.73
+          "rsi": 22.85
         },
-        "COMP": {
-          "pair": "COMPEUR",
-          "price": 15.98,
+        "ICP": {
+          "pair": "ICPEUR",
+          "price": 1.833,
           "bullish": false,
-          "rsi": 37.58
+          "rsi": 18.98
         },
-        "SNX": {
-          "pair": "SNXEUR",
-          "price": 0.1441,
-          "bullish": true,
-          "rsi": 51.52
-        },
-        "FLOW": {
-          "pair": "FLOWEUR",
-          "price": 0.014,
+        "XTZ": {
+          "pair": "XTZEUR",
+          "price": 0.17779,
           "bullish": false,
-          "rsi": 40.0
+          "rsi": 27.36
+        },
+        "KSM": {
+          "pair": "KSMEUR",
+          "price": 2.24,
+          "bullish": false,
+          "rsi": 18.0
+        },
+        "SAND": {
+          "pair": "SANDEUR",
+          "price": 0.0299,
+          "bullish": false,
+          "rsi": 26.32
+        },
+        "MANA": {
+          "pair": "MANAEUR",
+          "price": 0.05075,
+          "bullish": false,
+          "rsi": 15.35
         },
         "KAVA": {
           "pair": "KAVAEUR",
-          "price": 0.0266,
+          "price": 0.0251,
           "bullish": false,
-          "rsi": 54.43
+          "rsi": 35.44
+        },
+        "FLOW": {
+          "pair": "FLOWEUR",
+          "price": 0.0131,
+          "bullish": false,
+          "rsi": 25.0
+        },
+        "SNX": {
+          "pair": "SNXEUR",
+          "price": 0.1332,
+          "bullish": true,
+          "rsi": 39.24
+        },
+        "COMP": {
+          "pair": "COMPEUR",
+          "price": 15.28,
+          "bullish": false,
+          "rsi": 21.67
         }
       }
     }
